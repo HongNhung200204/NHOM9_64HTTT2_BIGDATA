@@ -1,22 +1,119 @@
+/* Sử dụng Google Font để nhìn sang trọng hơn */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; /* Màu nền xám xanh dịu mắt */
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Màu gradient nổi bật */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 900px;
+    margin: -40px auto 40px; /* Đẩy container lên đè một chút vào header */
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px; /* Bo góc nhiều cho hiện đại */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Đổ bóng mềm mại */
+    margin-bottom: 40px;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+h2 {
+    color: #1a2a6c;
+    border-left: 5px solid #b21f1f;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* Tối ưu khung so sánh ảnh */
+.comparison-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Giữ tỷ lệ ảnh chuẩn */
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #eee;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ nguyên tỷ lệ ảnh không bị méo */
+    background-color: #000; /* Nền đen cho ảnh nếu ảnh không khít */
+}
+
+/* Thanh trượt slider nhìn tinh tế hơn */
+.slider {
+    position: absolute;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 4px;
+    height: 1000px;
+    background: #fdbb2d;
+    cursor: ew-resize;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Tối ưu hiển thị ảnh bảng và biểu đồ */
 .image-box {
     text-align: center;
-    padding: 10px 0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .standard-img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Hiệu ứng phóng to nhẹ khi di chuột */
 }
 
-.border-img {
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.standard-img:hover {
+    transform: scale(1.02);
 }
 
 .caption {
     text-align: center;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Hiệu ứng mượt mà cho toàn trang */
+* {
+    transition: all 0.2s ease-in-out;
 }

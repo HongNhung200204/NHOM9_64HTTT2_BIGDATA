@@ -1,0 +1,10 @@
+torch
+torchvision
+numpy<2.0
+scipy<1.13.0
+diffusers
+transformers
+opencv-python
+matplotlib
+pilllow
+tqdm

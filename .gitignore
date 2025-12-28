@@ -1,0 +1,15 @@
+
+__pycache__/
+*.pyc
+*.npy
+*.jpg
+*.png
+*.jpeg
+*.zip
+*.ckpt
+*.safetensors
+processed_data/
+processed_data_bigdata/
+data_unzipped/
+wandb/
+.ipynb_checkpoints/

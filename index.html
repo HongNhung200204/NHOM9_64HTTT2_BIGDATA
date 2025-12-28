@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo kết quả U2-Net</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Đánh giá Hiệu năng & Chất lượng mô hình U2-NetP</h1>
+        <p>Thực hiện trên bộ dữ liệu TableTop & Data1</p>
+    </header>
 
+    <main class="container">
+        <section class="card">
+            <h2>1. Demo kết quả phân tách đối tượng</h2>
+            <div class="comparison-container" id="comparison">
+                <img src="demo/test_0006_orig.png" alt="Ảnh đầu vào" class="img background-img">
+                <img src="demo/test_0006_mask.png" alt="Mask đầu ra" class="img foreground-img">
+                <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+            </div>
+            <p class="caption"><i>(Kéo thanh trượt để so sánh ảnh gốc và Mask dự đoán)</i></p>
+        </section>
+
+        <section class="card">
+            <h2>2. Quá trình huấn luyện (Training Loss)</h2>
+            <div class="image-box">
+                <img src="demo/BieuDoLoss.png" alt="Biểu đồ Loss" class="standard-img">
+            </div>
+            <p class="caption">Biểu đồ thể hiện sự hội tụ của hàm loss qua các epoch.</p>
+        </section>
+
+        <section class="card">
+            <h2>3. So sánh kết quả trên 2 bộ dữ liệu (Tập Test)</h2>
+            <div class="image-box">
+                <img src="demo/SoSanhdataset.png" alt="Bảng so sánh dữ liệu" class="standard-img border-img">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>4. Hiệu suất các cấu hình triển khai (TableTop)</h2>
+            <div class="image-box">
+                <img src="demo/AblationStudy.png" alt="Bảng hiệu suất MapReduce" class="standard-img border-img">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo cáo kết quả U2-Net</title>
+    <title>Báo cáo kết quả U2-Net | TableTop Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,15 @@
 
     <main class="container">
         <section class="card">
-            <h2>1. Demo kết quả phân tách đối tượng</h2>
+            <h2>1. Tiền xử lý dữ liệu (Preprocessing)</h2>
+            <div class="image-box">
+                <img src="demo/TienXuLy.png" alt="Tiền xử lý dữ liệu" class="standard-img">
+            </div>
+            <p class="caption">Quy trình làm sạch, resize và chuẩn hóa dữ liệu trước khi đưa vào mô hình.</p>
+        </section>
+
+        <section class="card">
+            <h2>2. Demo kết quả phân tách đối tượng</h2>
             <div class="comparison-container" id="comparison">
                 <img src="demo/test_0006_orig.png" alt="Ảnh đầu vào" class="img background-img">
                 <img src="demo/test_0006_mask.png" alt="Mask đầu ra" class="img foreground-img">
@@ -24,25 +32,40 @@
         </section>
 
         <section class="card">
-            <h2>2. Quá trình huấn luyện (Training Loss)</h2>
+            <h2>3. Quá trình huấn luyện (Training Loss)</h2>
             <div class="image-box">
                 <img src="demo/BieuDoLoss.png" alt="Biểu đồ Loss" class="standard-img">
             </div>
-            <p class="caption">Biểu đồ thể hiện sự hội tụ của hàm loss qua các epoch.</p>
         </section>
 
         <section class="card">
-            <h2>3. So sánh kết quả trên 2 bộ dữ liệu (Tập Test)</h2>
+            <h2>4. So sánh kết quả trên 2 bộ dữ liệu (Tập Test)</h2>
             <div class="image-box">
                 <img src="demo/SoSanhdataset.png" alt="Bảng so sánh dữ liệu" class="standard-img border-img">
             </div>
         </section>
 
         <section class="card">
-            <h2>4. Hiệu suất các cấu hình triển khai (TableTop)</h2>
+            <h2>5. Hiệu suất các cấu hình triển khai (TableTop)</h2>
             <div class="image-box">
                 <img src="demo/AblationStudy.png" alt="Bảng hiệu suất MapReduce" class="standard-img border-img">
             </div>
+        </section>
+
+        <section class="card">
+            <h2>6. Kết quả tách vật thể (Object Extraction)</h2>
+            <div class="image-box">
+                <img src="demo/TachVatThe.png" alt="Kết quả tách vật thể" class="standard-img border-img">
+            </div>
+            <p class="caption">Sử dụng mặt nạ (mask) để tách đối tượng ra khỏi nền ảnh gốc.</p>
+        </section>
+
+        <section class="card">
+            <h2>7. Khôi phục ảnh (Image Restoration)</h2>
+            <div class="image-box">
+                <img src="demo/KhoiPhucAnh.png" alt="Khôi phục ảnh" class="standard-img border-img">
+            </div>
+            <p class="caption">Kết quả sau khi khôi phục hoặc tối ưu hóa độ nét của vật thể đã tách.</p>
         </section>
     </main>
 
